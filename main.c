@@ -61,8 +61,8 @@ Point get_cubic_bezier(Curve c, float t) {
 }
 
 int main() {
-    Color bg_color = {15, 20, 35};       // Темно-синий фон
-    Color curve_color = {190, 0, 255};   // Фиолетовый неон
+    Color bg_color = {15, 20, 35};
+    Color curve_color = {190, 0, 255};
 
     clear_canvas(bg_color);
 
@@ -78,7 +78,7 @@ int main() {
         draw_bold_point((int)pt.x, (int)pt.y, 3, curve_color);
     }
 
-    // ТЕПЕРЬ ПРОГРАММА САМА СОЗДАЕТ ФАЙЛ НАДИСКЕ
+
     FILE *f = fopen("render.ppm", "w");
     if (f == NULL) {
         printf("Ошибка\n");
